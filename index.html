@@ -1,1 +1,217 @@
-1555555
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- <meta http-equiv="refresh" content="5; url=https://www.google.com/"> -->
+
+    <title>Successfully Created!</title>
+
+</head>
+
+<style> 
+
+.codercolor {
+
+color: green;
+
+}
+
+.redirect {
+
+color: white;
+
+}
+
+.codercolors {
+
+color: teal;
+
+}
+
+.codercolorser {
+
+background-color: black;
+
+}
+
+#loader {
+
+  position: absolute;
+
+  left: 50%;
+
+  top: 50%;
+
+  z-index: 100;
+
+  width: 160px;
+
+  height: 160px;
+
+  margin: -76px 0 0 -76px;
+
+  border: 3px solid pink;
+
+  border-top-color: cyan;
+
+  border-bottom-color: maroon;
+
+  border-left-color: teal;
+
+  border-right-color: indigo;
+
+  border-radius: 50%;
+
+  animation: loading 6s ease infinite;
+
+  }
+
+  
+
+  @keyframes loading {
+
+  from {
+
+  transform: rotate(0turn);
+
+  }
+
+  to {
+
+  transform: rotate(100turn);
+
+  }
+
+  }
+
+/* Add animation to "page content" */
+
+.animate-bottom {
+
+  position: relative;
+
+  -webkit-animation-name: animatebottom;
+
+  -webkit-animation-duration: 1s;
+
+  animation-name: animatebottom;
+
+  animation-duration: 1s
+
+}
+
+@-webkit-keyframes animatebottom {
+
+  from { bottom:-100px; opacity:0 } 
+
+  to { bottom:0px; opacity:1 }
+
+}
+
+@keyframes animatebottom { 
+
+  from{ bottom:-100px; opacity:0 } 
+
+  to{ bottom:0; opacity:1 }
+
+}
+
+#myDiv {
+
+  display: none;
+
+  text-align: center;
+
+}
+
+</style>
+
+<body class="codercolorser" onload="myFunction()" style="margin:0;">
+
+<div id="loader"></div>
+
+<div style="display:none;" id="myDiv" class="animate-bottom">
+
+    
+
+    <h2 class="codercolor"style="text-align: center">Account Successfully Created!</h2>
+
+<br>
+
+<h1 class="redirect"style="text-align: center"></h1>
+
+<br>
+
+<h4 class="codercolors"style="text-align: center">You will be automatically redirect to Sign in Dashboard!</h4>
+
+    <script>
+
+    
+
+    let counter = document.querySelector('h1');
+
+    let count = 1;
+
+    
+
+    setInterval(()=>{
+
+    
+
+    counter.innerText = count;
+
+    count++
+
+    
+
+    if(count > 10) location.replace('https://login.jepongdev.ml')
+
+    
+
+    },1000)
+
+    
+
+    
+
+            var myVar;
+
+            
+
+            function myFunction() {
+
+            myVar = setTimeout(showPage, 1000);
+
+            }
+
+            
+
+            function showPage() {
+
+            document.getElementById("loader").style.display = "none";
+
+            document.getElementById("myDiv").style.display = "block";
+
+            }
+
+    
+
+    
+
+    
+
+    
+
+    </script>
+
+</body>
+
+</html>
